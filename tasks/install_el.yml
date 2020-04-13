@@ -1,0 +1,10 @@
+---
+# tasks file for subfinder
+
+- name: "Downloading and extracting {{ subfinder_app }} {{ subfinder_version }} on EL based systems."
+  unarchive:
+    src: "{{ subfinder_dl_url }}"
+    dest: "{{ subfinder_bin_path }}/{{ subfinder_app }}"
+    extra_opts:
+      - subfinder-linux-amd64
+    remote_src: yes
