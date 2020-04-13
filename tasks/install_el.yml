@@ -4,7 +4,10 @@
 - name: "Downloading and extracting {{ subfinder_app }} {{ subfinder_version }} on EL based systems."
   unarchive:
     src: "{{ subfinder_dl_url }}"
-    dest: "{{ subfinder_bin_path }}/{{ subfinder_app }}"
+    dest: "{{ subfinder_bin_path }}"
+    owner: "{{ subfinder_app_owner }}"
+    group: "{{ subfinder_app_group }}"
     extra_opts:
-      - subfinder-linux-amd64
+      - --transform
+      - s/subfinder\-linux\-amd64/{{ subfinder_app }}/
     remote_src: yes
