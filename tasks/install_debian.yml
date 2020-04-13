@@ -1,0 +1,13 @@
+---
+# tasks file for subfinder
+
+- name: "Downloading and extracting {{ subfinder_app }} {{ subfinder_version }} on Debian based systems."
+  unarchive:
+    src: "{{ subfinder_dl_url }}"
+    dest: "{{ subfinder_bin_path }}"
+    owner: "{{ subfinder_app_owner }}"
+    group: "{{ subfinder_app_group }}"
+    extra_opts:
+      - --transform
+      - s/subfinder\-linux\-amd64/{{ subfinder_app }}/
+    remote_src: yes
