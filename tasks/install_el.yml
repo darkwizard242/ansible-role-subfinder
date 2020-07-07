@@ -1,7 +1,7 @@
 ---
-# tasks file for subfinder
+# tasks file for subfinder | EL Family
 
-- name: "Downloading and extracting {{ subfinder_app }} {{ subfinder_version }} on EL based systems."
+- name: EL Family | Downloading and extracting {{ subfinder_app }} {{ subfinder_version }}
   unarchive:
     src: "{{ subfinder_dl_url }}"
     dest: "{{ subfinder_bin_path }}"
