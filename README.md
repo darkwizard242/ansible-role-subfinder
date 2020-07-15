@@ -19,8 +19,8 @@ subfinder_app: subfinder
 subfinder_version: 2.3.6
 subfinder_app_owner: root
 subfinder_app_group: root
-subfinder_osarch: linux-amd64
-subfinder_dl_url: https://github.com/projectdiscovery/{{ subfinder_app }}/releases/download/v{{ subfinder_version }}/{{ subfinder_app }}-{{ subfinder_osarch }}.tar
+subfinder_osarch: linux_amd64
+subfinder_dl_url: "https://github.com/projectdiscovery/{{ subfinder_app }}/releases/download/v{{ subfinder_version }}/{{ subfinder_app }}_{{ subfinder_version }}_ {{ subfinder_osarch }}.tar"
 subfinder_bin_path: /usr/local/bin
 ```
 
@@ -32,7 +32,7 @@ subfinder_app       | subfinder                                                 
 subfinder_version   | 2.3.6                                                                                                                                               | Defined to dynamically fetch the desired version to install. Defaults to: **2.3.6**
 subfinder_app_owner | root                                                                                                                                                | Defined to dynamically set the owner for the file..
 subfinder_app_group | root                                                                                                                                                | Defined to dynamically set the primary group for the file.
-subfinder_osarch    | linux-amd64                                                                                                                                         | Defines os architecture.
+subfinder_osarch    | linux_amd64                                                                                                                                         | Defines os architecture.
 subfinder_dl_url    | <https://github.com/projectdiscovery/{{> subfinder_app }}/releases/download/v{{ subfinder_version }}/{{ subfinder_app }}-{{ subfinder_osarch }}.tar | Defines URL to download the subfinder binary from.
 subfinder_bin_path  | /usr/local/bin                                                                                                                                      | Defined to dynamically set the appropriate path to store subfinder binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
 
