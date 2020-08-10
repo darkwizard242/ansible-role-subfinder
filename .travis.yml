@@ -29,6 +29,7 @@ addons:
 before_install:
   - sudo apt-get update
   - sudo apt-get upgrade -y
+  - docker version
 
 install:
   - pip3 install molecule docker ansible-lint flake8 testinfra
