@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 subfinder_app: subfinder
-subfinder_version: 2.4.1
+subfinder_version: 2.4.2
 subfinder_app_owner: root
 subfinder_app_group: root
 subfinder_osarch: linux_amd64
@@ -29,7 +29,7 @@ subfinder_bin_path: /usr/local/bin
 Variable            | Value (default)                                                                                                                                                                  | Description
 ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------------------------------------------------------------
 subfinder_app       | subfinder                                                                                                                                                                        | Defines the app to install i.e. **subfinder**
-subfinder_version   | 2.4.1                                                                                                                                                                            | Defined to dynamically fetch the desired version to install. Defaults to: **2.4.1**
+subfinder_version   | 2.4.2                                                                                                                                                                            | Defined to dynamically fetch the desired version to install. Defaults to: **2.4.2**
 subfinder_app_owner | root                                                                                                                                                                             | Defined to dynamically set the owner for the file..
 subfinder_app_group | root                                                                                                                                                                             | Defined to dynamically set the primary group for the file.
 subfinder_osarch    | linux_amd64                                                                                                                                                                      | Defines os architecture.
