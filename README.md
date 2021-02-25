@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 subfinder_app: subfinder
-subfinder_version: 2.4.5
+subfinder_version: 2.4.6
 subfinder_app_owner: root
 subfinder_app_group: root
 subfinder_osarch: linux_amd64
