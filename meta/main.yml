@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: subfinder
-  author: Ali Muhammad
+  author: darkwizard242
   description: Subfinder installation/uninstallation. Subfinder is a subdomain discovery tool.
   company: none
   license: MIT
