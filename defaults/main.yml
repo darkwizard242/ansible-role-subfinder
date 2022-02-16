@@ -3,8 +3,10 @@
 
 subfinder_app: subfinder
 subfinder_version: 2.4.8
-subfinder_app_owner: root
-subfinder_app_group: root
-subfinder_osarch: linux_amd64
-subfinder_dl_url: "https://github.com/projectdiscovery/{{ subfinder_app }}/releases/download/v{{ subfinder_version }}/{{ subfinder_app }}_{{ subfinder_version }}_{{ subfinder_osarch }}.tar.gz"
+subfinder_os: linux
+subfinder_arch: amd64
+subfinder_dl_url: "https://github.com/projectdiscovery/{{ subfinder_app }}/releases/download/v{{ subfinder_version }}/{{ subfinder_app }}_{{ subfinder_version }}_{{ subfinder_os}}_{{ subfinder_arch }}.tar.gz"
 subfinder_bin_path: /usr/local/bin
+subfinder_file_owner: root
+subfinder_file_group: root
+subfinder_file_mode: '0755'

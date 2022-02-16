@@ -17,24 +17,28 @@ Available variables are listed below (located in `defaults/main.yml`):
 ```yaml
 subfinder_app: subfinder
 subfinder_version: 2.4.8
-subfinder_app_owner: root
-subfinder_app_group: root
-subfinder_osarch: linux_amd64
-subfinder_dl_url: "https://github.com/projectdiscovery/{{ subfinder_app }}/releases/download/v{{ subfinder_version }}/{{ subfinder_app }}_{{ subfinder_version }}_{{ subfinder_osarch }}.tar.gz"
+subfinder_os: linux
+subfinder_arch: amd64
+subfinder_dl_url: "https://github.com/projectdiscovery/{{ subfinder_app }}/releases/download/v{{ subfinder_version }}/{{ subfinder_app }}_{{ subfinder_version }}_{{ subfinder_os}}_{{ subfinder_arch }}.tar.gz"
 subfinder_bin_path: /usr/local/bin
+subfinder_file_owner: root
+subfinder_file_group: root
+subfinder_file_mode: '0755'
 ```
 
 ### Variables table:
 
-Variable            | Value (default)                                                                                                                                                                  | Description
-------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------------------------------------------------------------
-subfinder_app       | subfinder                                                                                                                                                                        | Defines the app to install i.e. **subfinder**
-subfinder_version   | 2.4.5                                                                                                                                                                            | Defined to dynamically fetch the desired version to install. Defaults to: **2.4.8**
-subfinder_app_owner | root                                                                                                                                                                             | Defined to dynamically set the owner for the file..
-subfinder_app_group | root                                                                                                                                                                             | Defined to dynamically set the primary group for the file.
-subfinder_osarch    | linux_amd64                                                                                                                                                                      | Defines os architecture.
-subfinder_dl_url    | "<https://github.com/projectdiscovery/{{> subfinder_app }}/releases/download/v{{ subfinder_version }}/{{ subfinder_app }}_{{ subfinder_version }}_{{ subfinder_osarch }}.tar.gz" | Defines URL to download the subfinder binary from.
-subfinder_bin_path  | /usr/local/bin                                                                                                                                                                   | Defined to dynamically set the appropriate path to store subfinder binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
+Variable             | Description
+-------------------- | -----------------------------------------------------------------------------------------------------------------------------------------------------------
+subfinder_app        | Defines the app to install i.e. **subfinder**
+subfinder_version    | Defined to dynamically fetch the desired version to install. Defaults to: **2.4.8**
+subfinder_os         | Defines os type. Used for obtaining the correct type of binaries based on OS type. Defaults to: **linux**
+subfinder_arch       | Defines os architecture. Used to set the correct type of binaries based on OS System Architecture. Defaults to: **amd64**
+subfinder_dl_url     | Defines URL to download the subfinder binary from.
+subfinder_bin_path   | Defined to dynamically set the appropriate path to store subfinder binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
+subfinder_file_owner | Owner for the binary file of subfinder.
+subfinder_file_group | Group for the binary file of subfinder.
+subfinder_file_mode  | Mode for the binary file of subfinder.
 
 ## Dependencies
 
@@ -76,4 +80,4 @@ For customizing behavior of role (i.e. placing binary of **subfinder** package i
 
 ## Author Information
 
-This role was created by [Ali Muhammad](https://www.linkedin.com/in/ali-muhammad-759791130/).
+This role was created by [Ali Muhammad](https://www.alimuhammad.dev/).

@@ -5,9 +5,10 @@
   unarchive:
     src: "{{ subfinder_dl_url }}"
     dest: "{{ subfinder_bin_path }}"
-    owner: "{{ subfinder_app_owner }}"
-    group: "{{ subfinder_app_group }}"
     extra_opts:
       - --transform
-      - s/subfinder\-linux\-amd64/{{ subfinder_app }}/
+      - s/{{ subfinder_app }}\-{{ subfinder_os }}\-{{ subfinder_arch }}/{{ subfinder_app }}/
     remote_src: yes
+    owner: "{{ subfinder_file_owner }}"
+    group: "{{ subfinder_file_group }}"
+    mode: "{{ subfinder_file_mode }}"
