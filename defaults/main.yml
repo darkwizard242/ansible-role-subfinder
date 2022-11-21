@@ -2,10 +2,10 @@
 # defaults file for subfinder
 
 subfinder_app: subfinder
-subfinder_version: 2.4.8
+subfinder_version: 2.5.5
 subfinder_os: linux
 subfinder_arch: amd64
-subfinder_dl_url: "https://github.com/projectdiscovery/{{ subfinder_app }}/releases/download/v{{ subfinder_version }}/{{ subfinder_app }}_{{ subfinder_version }}_{{ subfinder_os}}_{{ subfinder_arch }}.tar.gz"
+subfinder_dl_url: "https://github.com/projectdiscovery/{{ subfinder_app }}/releases/download/v{{ subfinder_version }}/{{ subfinder_app }}_{{ subfinder_version }}_{{ subfinder_os}}_{{ subfinder_arch }}.zip"
 subfinder_bin_path: /usr/local/bin
 subfinder_file_owner: root
 subfinder_file_group: root
