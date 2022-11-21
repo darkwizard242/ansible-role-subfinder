@@ -1,14 +1,17 @@
 ---
 # tasks file for subfinder | EL Family
 
-- name: EL Family | Downloading and extracting {{ subfinder_app }} {{ subfinder_version }}
-  unarchive:
-    src: "{{ subfinder_dl_url }}"
+- name: EL Family | Install unzip if it is currently not in installed state
+  ansible.builtin.yum:
+    name: unzip
+    state: present
+    update_cache: yes
+
+- name: EL Family | Unarchive {{ subfinder_app }} {{ subfinder_version }}
+  ansible.builtin.unarchive:
+    src:  "{{ subfinder_dl_url }}"
     dest: "{{ subfinder_bin_path }}"
-    extra_opts:
-      - --transform
-      - s/{{ subfinder_app }}\-{{ subfinder_os }}\-{{ subfinder_arch }}/{{ subfinder_app }}/
-    remote_src: yes
     owner: "{{ subfinder_file_owner }}"
     group: "{{ subfinder_file_group }}"
     mode: "{{ subfinder_file_mode }}"
+    remote_src: true
