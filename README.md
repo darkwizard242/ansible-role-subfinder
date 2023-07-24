@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 subfinder_app: subfinder
-subfinder_version: 2.6.0
+subfinder_version: 2.6.1
 subfinder_os: linux
 subfinder_arch: amd64
 subfinder_dl_url: "https://github.com/projectdiscovery/{{ subfinder_app }}/releases/download/v{{ subfinder_version }}/{{ subfinder_app }}_{{ subfinder_version }}_{{ subfinder_os}}_{{ subfinder_arch }}.tar.gz"
@@ -31,7 +31,7 @@ subfinder_file_mode: '0755'
 Variable             | Description
 -------------------- | -----------------------------------------------------------------------------------------------------------------------------------------------------------
 subfinder_app        | Defines the app to install i.e. **subfinder**
-subfinder_version    | Defined to dynamically fetch the desired version to install. Defaults to: **2.6.0**
+subfinder_version    | Defined to dynamically fetch the desired version to install. Defaults to: **2.6.1**
 subfinder_os         | Defines os type. Used for obtaining the correct type of binaries based on OS type. Defaults to: **linux**
 subfinder_arch       | Defines os architecture. Used to set the correct type of binaries based on OS System Architecture. Defaults to: **amd64**
 subfinder_dl_url     | Defines URL to download the subfinder binary from.
