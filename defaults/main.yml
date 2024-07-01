@@ -3,9 +3,17 @@
 
 subfinder_app: subfinder
 subfinder_version: 2.6.6
-subfinder_os: linux
-subfinder_arch: amd64
-subfinder_dl_url: "https://github.com/projectdiscovery/{{ subfinder_app }}/releases/download/v{{ subfinder_version }}/{{ subfinder_app }}_{{ subfinder_version }}_{{ subfinder_os}}_{{ subfinder_arch }}.zip"
+subfinder_os: "{{ ansible_system | lower }}"
+subfinder_architecture_map:
+  amd64: amd64
+  arm: arm64
+  x86_64: amd64
+  armv6l: armv6
+  armv7l: armv7
+  aarch64: arm64
+  32-bit: "386"
+  64-bit: amd64
+subfinder_dl_url: "https://github.com/projectdiscovery/{{ subfinder_app }}/releases/download/v{{ subfinder_version }}/{{ subfinder_app }}_{{ subfinder_version }}_{{ subfinder_os}}_{{ subfinder_architecture_map[ansible_architecture] }}.zip"
 subfinder_bin_path: /usr/local/bin
 subfinder_file_owner: root
 subfinder_file_group: root
