@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 subfinder_app: subfinder
-subfinder_version: 2.6.8
+subfinder_version: 2.7.1
 subfinder_os: "{{ ansible_system | lower }}"
 subfinder_architecture_map:
   amd64: amd64
@@ -39,7 +39,7 @@ subfinder_file_mode: '0755'
 Variable                   | Description
 -------------------------- | -----------------------------------------------------------------------------------------------------------------------------------------------------------
 subfinder_app              | Defines the app to install i.e. **subfinder**
-subfinder_version          | Defined to dynamically fetch the desired version to install. Defaults to: **2.6.8**
+subfinder_version          | Defined to dynamically fetch the desired version to install. Defaults to: **2.7.1**
 subfinder_os               | Defines os type. Used for obtaining the correct type of binaries based on OS type.
 subfinder_architecture_map | Defines os architecture. Used to set the correct type of binaries based on OS System Architecture.
 subfinder_dl_url           | Defines URL to download the subfinder binary from.
