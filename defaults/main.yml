@@ -2,7 +2,7 @@
 # defaults file for subfinder
 
 subfinder_app: subfinder
-subfinder_version: 2.10.0
+subfinder_version: 2.10.1
 subfinder_os: "{{ ansible_system | lower }}"
 subfinder_architecture_map:
   amd64: amd64
